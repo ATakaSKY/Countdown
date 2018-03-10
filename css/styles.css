@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.landing{
+    position: relative;
+    background: url('https://preview.ibb.co/c7Drsn/showcase.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.landing-inner{
+    position: absolute;
+    background:rgba(0,0,0,.7);
+    height: 100%;
+    width: 100%;
+}
+
+.landing h1{
+    font-size: 40px;
+}
+
+.landing p{
+    font-size: 20px;
+}
+
+.countdown{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.countdown div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #fff;
+    margin: 10px;
+    border-radius: 10px;
+    background:rgba(0,0,0,.2)
+}
+
+.countdown div:first-child{
+    background:#17a2b8;
+}
+
+.countdown span{
+    font-size: 20px;
+}
+
+
+@media(max-width:600px){
+    .landing img{
+        width: 70%;
+        margin-top: 30px
+    }
+
+    .landing h1{
+        font-size: 30px
+    }
+
+    .landing p{
+        font-size: 18px;
+    }
+
+    .countdown{
+        flex-direction: column
+    }
+
+    .countdown div{
+        display: none;
+    }
+
+    .countdown div:first-child{
+        display: block;
+        width: 80%
+    }
+}
+
+@media(max-height:600px){
+    .landing h1{
+        display: none;
+    }
+
+    .countdown div:first-child{
+        padding: 8px;
+        font-size: 35px
+    }
+}
+
+
+@media(max-height:400px){
+    .landing h1,.landing p{
+        display: none;
+    }
+}
